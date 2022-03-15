@@ -1,0 +1,1 @@
+enviei junto com o projeto o arquivo json com os requests solicitados

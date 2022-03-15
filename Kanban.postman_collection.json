@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "1c389223-2781-4b7d-b82c-d59bd43905d1",
+		"name": "Kanban",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallcards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImxldHNjb2RlIiwibmJmIjoxNjQ3MzExNDAyLCJleHAiOjE2NDczMTg2MDIsImlhdCI6MTY0NzMxMTQwMn0.OCfrktawOlNDi5g2nNEgsDEzNk47hvJs1O9rbWotlQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"card1\",\r\n    \"conteudo\":\"conteudo1\",\r\n    \"lista\":\"lista1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addcards",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImxldHNjb2RlIiwibmJmIjoxNjQ3MzExNDAyLCJleHAiOjE2NDczMTg2MDIsImlhdCI6MTY0NzMxMTQwMn0.OCfrktawOlNDi5g2nNEgsDEzNk47hvJs1O9rbWotlQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"card1\",\r\n    \"conteudo\":\"conteudo2\",\r\n    \"lista\":\"lista1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatecard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImxldHNjb2RlIiwibmJmIjoxNjQ3MzExNDAyLCJleHAiOjE2NDczMTg2MDIsImlhdCI6MTY0NzMxMTQwMn0.OCfrktawOlNDi5g2nNEgsDEzNk47hvJs1O9rbWotlQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6c6be58b-6d69-4fbd-a3b9-af6e198f128e\",\r\n    \"titulo\":\"card18\",\r\n    \"conteudo\":\"conteudo2688\",\r\n    \"lista\":\"lista98\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cards/6c6be58b-6d69-4fbd-a3b9-af6e198f128e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cards",
+						"6c6be58b-6d69-4fbd-a3b9-af6e198f128e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletecard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImxldHNjb2RlIiwibmJmIjoxNjQ3MzExNDAyLCJleHAiOjE2NDczMTg2MDIsImlhdCI6MTY0NzMxMTQwMn0.OCfrktawOlNDi5g2nNEgsDEzNk47hvJs1O9rbWotlQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6c6be58b-6d69-4fbd-a3b9-af6e198f128e\",\r\n    \"titulo\":\"card18\",\r\n    \"conteudo\":\"conteudo2688\",\r\n    \"lista\":\"lista98\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cards/6c6be58b-6d69-4fbd-a3b9-af6e198f128e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cards",
+						"6c6be58b-6d69-4fbd-a3b9-af6e198f128e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
